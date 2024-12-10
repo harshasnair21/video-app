@@ -1,0 +1,19 @@
+.comment-container {
+}
+.new-comment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+.new-comment input {
+  border: none;
+  padding: 5px;
+  width: 200px;
+  border-bottom: 1px solid #aaaaaa;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

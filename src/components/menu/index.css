@@ -1,0 +1,56 @@
+.menu-container {
+  height: 100vh;
+  color: #fff;
+  background-color: #202020;
+  position: sticky;
+  top: 0;
+  flex: 1.2;
+}
+.menu {
+  padding: 18px 26px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+img {
+  height: 25px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  padding: 7.5px 0px;
+}
+.item:hover {
+  background-color: #373737;
+}
+.hr {
+  margin: 15px 0px;
+  border: 0.5px solid #373737;
+}
+.login {
+}
+.login button {
+  padding: 5px 15px;
+  background-color: transparent;
+  border: 1px solid #3ea6ff;
+  color: #3ea6ff;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
