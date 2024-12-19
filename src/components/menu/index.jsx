@@ -18,8 +18,11 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
+import { useSelector } from "react-redux";
 
 const Menu = () => {
+  const currentUser = useSelector((state) => state.user.currentUser);
+
   return (
     <div className="menu-container">
       <div className="menu">
@@ -35,18 +38,27 @@ const Menu = () => {
             YouTube
           </div>
         </Link>
-        <div className="item">
-          <HomeIcon />
-          Home
-        </div>
-        <div className="item">
-          <ExploreOutlinedIcon />
-          Explore
-        </div>
-        <div className="item">
-          <SubscriptionsOutlinedIcon />
-          Subscriptions
-        </div>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <div className="item">
+            <HomeIcon />
+            Home
+          </div>
+        </Link>
+        <Link to="trends" style={{ textDecoration: "none", color: "inherit" }}>
+          <div className="item">
+            <ExploreOutlinedIcon />
+            Explore
+          </div>
+        </Link>
+        <Link
+          to="subscriptions"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <div className="item">
+            <SubscriptionsOutlinedIcon />
+            Subscriptions
+          </div>
+        </Link>
         <div className="hr"></div>
         <div className="item">
           <VideoLibraryOutlinedIcon />
@@ -57,15 +69,19 @@ const Menu = () => {
           History
         </div>
         <div className="hr"></div>
-        <div className="login">
-          Sign in to like Videos, comment, and subscribe.
-          <Link to="signin" style={{ textDecoration: "none" }}>
-            <button>
-              <AccountCircleOutlinedIcon /> SIGN IN
-            </button>
-          </Link>
-        </div>
-        <div className="hr"></div>
+        {!currentUser && (
+          <>
+            <div className="login">
+              Sign in to like Videos, comment, and subscribe.
+              <Link to="signin" style={{ textDecoration: "none" }}>
+                <button>
+                  <AccountCircleOutlinedIcon /> SIGN IN
+                </button>
+              </Link>
+            </div>
+            <div className="hr"></div>
+          </>
+        )}
         <div className="title">BEST OF YOUTUBE</div>
         <div className="item">
           <LibraryMusicOutlinedIcon />

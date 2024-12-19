@@ -73,11 +73,16 @@
   font-size: 14px;
 }
 .video .channel-button {
-  columns: #fff;
+  color: #fff;
   font-weight: 500;
   background-color: red;
   border-radius: 3px;
   border: none;
   height: max-content;
   padding: 10px 20px;
+}
+.video .curr-video {
+  max-height: 720px;
+  width: 100%;
+  object-fit: cover;
 }

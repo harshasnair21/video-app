@@ -45,3 +45,19 @@ input {
   outline: none;
   color: #fff;
 }
+.navbar .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #ccc;
+}
+.navbar .image {
+  width: 32px;
+  height: 32px;
+  background-color: #999;
+  border-radius: 50%;
+}
+.video-btn {
+  cursor: pointer;
+}
